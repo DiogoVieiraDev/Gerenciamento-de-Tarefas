@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    
+  }
+
+  ol, ul {
+	list-style: none;
+  }
+  body {
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    background-image: repeating-linear-gradient(45deg, #9393e6 0, #9393e6 0.5px, transparent 0, transparent 50%);
+    background-size: 10px 10px;
+    background-color: #f3f7f8;
+    padding: 20px; 
+  }
+  
+  .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+  }
+  
+  h1 {
+    font-size: 24px bold !important;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px; 
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #1e87f0;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin-bottom: 10px; 
+  }
+  
+
+  header {
+    background-color: #1e87f0;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+  footer {
+    background-color: #1e87f0;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px; 
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  
+  .task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .task-form label {
+    margin-bottom: 5px;
+  }
+  
+  
+  .task-item {
+    
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+  }
+  
+  .task-item.completed {
+    background-color: #90e798;
+  }
+  
+  .task-text {
+    font-weight: bold;
+    text-align: center; 
+    font-size: 20px;
+
+  }
+  
+  .description-text {
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+ 
+  .task-actions {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .task-actions button {
+    margin-right: 10px;
+  }
+  
+  .task-edit-button {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-delete-button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-completed-checkbox {
+    margin-top: 5px;
+    transform: scale(1.5);
+    margin-right: 10px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+  }
+  
+  .task-completed-checkbox::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: -4px;
+    width: 6px;
+    height: 15px;
+    border: solid #5f0404;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+  }
+  
+  .task-completed-checkbox:checked::after {
+    display: block;
+  }
+  
+  .task-completed-label {
+    font-size: 14px;
+    color: #333333;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+  
+  .task-completed-checkbox:checked + .task-completed-label {
+    opacity: 0;
+  }
+ 
+  .filter-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filter-buttons button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #1e87f0;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+
+  
+
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .task-item {
+      padding: 5px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    input[type="text"],
+    textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
